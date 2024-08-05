@@ -11,9 +11,24 @@ plugins {
 dependencies {
     implementation 'org.apache.commons:commons-text'
     implementation project(':utilities')
+    implementation'org.slf4j:slf4j-simple:2.0.13'
+    //implementation("org.seleniumhq.selenium:selenium-java:4.22.0")
 }
 
 application {
     // Define the main class for the application.
     mainClass = 'org.example.app.App'
+}
+
+tasks.register("hello") {
+    doLast {
+        println('Hello!')
+    }
+}
+
+tasks.register("greet") {
+    doLast {
+        println('How are you?')
+    }
+    dependsOn("hello")
 }

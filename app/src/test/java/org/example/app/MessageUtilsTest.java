@@ -4,11 +4,19 @@
 package org.example.app;
 
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MessageUtilsTest {
-    @Test void testGetMessage() {
+
+    Logger log = LoggerFactory.getLogger(MessageUtilsTest.class);
+    @Test
+    void testGetMessage() {
         assertEquals("Hello      World!", MessageUtils.getMessage());
+        log.info("Test passed");
     }
+
 }
