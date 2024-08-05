@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class MessageUtilsTest {
 
@@ -17,6 +18,11 @@ class MessageUtilsTest {
     void testGetMessage() {
         assertEquals("Hello      World!", MessageUtils.getMessage());
         log.info("Test passed");
+    }
+
+     @Test void appHasAGreeting() {
+        App classUnderTest = new App();
+        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
 
 }

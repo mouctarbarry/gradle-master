@@ -18,4 +18,8 @@ public class App {
         String result = join(tokens);
         System.out.println(WordUtils.capitalize(result));
     }
+
+    public String getGreeting() {
+        return "Hello World!";
+    }
 }
